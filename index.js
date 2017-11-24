@@ -9,14 +9,18 @@ function getDataFromApi(searchTerm, callback){
     per_page: 5
   };
   $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
+//  $.getJSON(YOUTUBE_SEARCH_URL, query).then(callback);
+  
 }
 
 
 function renderResult(result){
    return `
+   console.log(${result.id.videoId});
     <div>
       <h2>
-      <img class="thumbnail" src="${result.snippet.thumbnails.default.url}" target="_blank"> ${result.snippet.title}</h2>
+      <a href="https://www.youtube.com/watch?v=${result.id.videoId}">
+      <img class="thumbnail" src="${result.snippet.thumbnails.default.url}" target="_blank"></a> ${result.snippet.title}</h2>
     </div>
   `;
 }
@@ -36,6 +40,7 @@ function watchSubmit(){
     console.log(query);
     queryTarget.val("");
     getDataFromApi(query, displayYoutubeSearchData);
+
   })
 }
 function link(){

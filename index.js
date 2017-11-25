@@ -28,14 +28,16 @@ function renderResult(result){
 
 function displayNumberOfResults(data){
   console.log(resultNumber);
-  $('.number-of-results').html(`<p>This page displays ${resultNumber} results.</p>`)
+  $('.number-of-results').html(`<p>This page displays ${resultNumber} results.</p>`).prop('hidden', false);
 }
 
 function displayYoutubeSearchData(data){
   console.log(data);
+  
   const results = data.items.map((item,index)=> renderResult(item));
-  $('.results').html(results).prop('hidden', false);
   displayNumberOfResults(data);
+  $('.results').html(results).prop('hidden', false);
+  
 }
 
 
@@ -63,6 +65,6 @@ $(watchSubmit);
 
 
 
-//HOW DO I MAKE IT READ OUT .nnumber-of-results on click?
+//HOW DO I MAKE IT READ OUT .nnumber-of-results on click? why isnt aria live working?
 //is my css linked?
 //change border on focused element?

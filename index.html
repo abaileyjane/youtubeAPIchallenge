@@ -13,8 +13,8 @@
     <form action="#" class="search-form" role="form">Type search here:<br><input type="text" class="search-query"> 
       <button type="submit" id="submit-button">Submit</button></form>
     <h2>Results</h2>
-    <div class="number-of-results"></div>
-    <div class="results" role="main" hidden></div>
+    <div class="number-of-results" aria-live="assertive" hidden></div>
+    <div class="results" role="main" aria-live="polite" hidden></div>
     <script src="index.js"></script>
   </body>
 </html>

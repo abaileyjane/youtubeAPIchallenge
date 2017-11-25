@@ -1,0 +1,4 @@
+a:focus {
+	border-width: 5px;
+	border-color: pink;
+}

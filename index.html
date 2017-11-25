@@ -9,13 +9,13 @@
           src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
-    <h1>Youtube Video Search</h1>
-    <form action="#" class="search-form">Type search here:<br><input type="text" class="search-query"> 
+    <h1 role="banner">Youtube Video Search</h1>
+    <form action="#" class="search-form" role="form">Type search here:<br><input type="text" class="search-query"> 
       <button type="submit" id="submit-button">Submit</button></form>
     <h2>Results</h2>
-    <div class="results">
-      
-    </div>
+    <div class="number-of-results"></div>
+    <div class="results" role="main" hidden></div>
     <script src="index.js"></script>
   </body>
 </html>
+
